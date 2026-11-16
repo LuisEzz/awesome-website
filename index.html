@@ -3,11 +3,25 @@
 <head>
 <meta charset="utf-8">
 <title>Yahooo</title>
+<style>
+	body { text-align: center; font-family: sans-serif; }
+  #contador { font-size: 28px; font-weight: bold; margin-top: 8px; }
+</style>
 </head>
 <body>
-<img id="yui" src="yui.jpg">
+<div style="text-align: center">
+  <img id="yui" src="yui.jpg" alt="Yui">
+<div id="contador">0</div>
+</div>
+
 <script>
-document.getElementById('yui').onclick = () => new Audio('yahooo.mp3').play();
+let cliks =0;
+document.getElementById('yui').addEventListener('click', () => {
+new Audio('yahooo.mp3').play();
+cliks++;
+document.getElementById('contador').textContent  = cliks;
+});
+
 </script>
 </body>
 </html>
